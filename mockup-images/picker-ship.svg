@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 900" width="700" height="900" role="img" aria-labelledby="t">
+<title id="t">Phosphor mock-up: the ship picker, step 2, choosing a ship of the chosen maker</title>
+<style>
+text{font-family:'B612 Mono','DejaVu Sans Mono',monospace;fill:#6CFFB0}
+.l{font-size:14px;fill:#2E8F63;letter-spacing:.04em}
+.s{font-size:13px;fill:#2E8F63;letter-spacing:.04em}
+.t{font-size:17px;fill:#2E8F63;letter-spacing:.04em}
+.h{font-size:20px}
+.v{font-weight:700}
+.b{font-size:15px;font-weight:700;text-anchor:middle;letter-spacing:.04em}
+.f{font-size:12px;fill:#2E8F63;letter-spacing:.08em}
+.w{font-size:19px;text-anchor:middle}
+.e{text-anchor:end}
+.m{text-anchor:middle}
+.d{fill:#2E8F63}
+.o{fill:#FFB347}
+.k{fill:#7FD4FF}
+.z{fill:#04070A}
+.c{fill:none;stroke:#2E8F63}
+.x{fill:none;stroke:#6CFFB0}
+</style>
+<rect width="700" height="900" fill="#1B1E22"/>
+<g stroke="#2C3138" stroke-width="22">
+<path d="M78 25H622" stroke-dasharray="64 56"/>
+<path d="M78 875H622" stroke-dasharray="64 56"/>
+<path d="M25 98V802" stroke-dasharray="64 96"/>
+<path d="M675 98V802" stroke-dasharray="64 96"/>
+</g>
+<g transform="translate(50,50)">
+<rect width="600" height="800" rx="6" fill="#04070A"/>
+<rect class="x" x="38" y="5" width="44" height="24" rx="3"/>
+<text class="b" x="60" y="22">A-F</text>
+<text class="b" x="180" y="22">G-L</text>
+<text class="b" x="300" y="22">M-R</text>
+<text class="b" x="420" y="22">S-Z</text>
+<text class="b k" x="540" y="22">MINE</text>
+<rect class="x" x="154" y="771" width="52" height="24" rx="3"/>
+<text class="b" x="60" y="788">FLIGHT</text>
+<text class="b" x="180" y="788">SHIP</text>
+<text class="b" x="300" y="788">NAV</text>
+<text class="b" x="420" y="788">LOG</text>
+<text class="b" x="540" y="788">PILOT</text>
+<g transform="translate(6,38)"><rect class="c" width="228" height="84" rx="4"/><text class="v" x="12" y="38" font-size="20">[SHIP NAME]</text><text class="s" x="12" y="62">[ROLE]</text></g>
+<g transform="translate(6,198)"><rect class="c" width="228" height="84" rx="4"/><text class="v" x="12" y="38" font-size="20">[SHIP NAME]</text><text class="s" x="12" y="62">[ROLE]</text></g>
+<g transform="translate(6,358)"><rect class="c" width="228" height="84" rx="4"/><text class="v" x="12" y="38" font-size="20">[SHIP NAME]</text><text class="s" x="12" y="62">[ROLE]</text></g>
+<g transform="translate(6,518)"><rect class="c" width="228" height="84" rx="4"/><text class="v" x="12" y="38" font-size="20">[SHIP NAME]</text><text class="s" x="12" y="62">[ROLE]</text></g>
+<g transform="translate(6,678)"><rect class="c" width="228" height="84" rx="4"/><text class="v" x="12" y="38" font-size="20">[SHIP NAME]</text><text class="s" x="12" y="62">[ROLE]</text></g>
+<g transform="translate(366,38)"><rect class="c" width="228" height="84" rx="4"/><text class="v e" x="216" y="38" font-size="20">[SHIP NAME]</text><text class="s e" x="216" y="62">[ROLE]</text></g>
+<g transform="translate(366,198)"><rect class="c" width="228" height="84" rx="4"/><text class="v e" x="216" y="38" font-size="20">[SHIP NAME]</text><text class="s e" x="216" y="62">[ROLE]</text></g>
+<g transform="translate(366,358)"><rect class="c" width="228" height="84" rx="4"/><text class="v e" x="216" y="38" font-size="20">[SHIP NAME]</text><text class="s e" x="216" y="62">[ROLE]</text></g>
+<text class="s m" x="300" y="324">STEP 2 OF 2</text>
+<text class="l m" x="300" y="352">CHOOSE A</text>
+<text class="v m" x="300" y="390" font-size="30">SHIP</text>
+<text class="l m" x="300" y="418">FROM</text>
+<text class="l m" x="300" y="436">[MAKER NAME]</text>
+<text class="v m" x="300" y="472" font-size="20">A TO F</text>
+<text class="s m" x="300" y="504">PRESS THE</text>
+<text class="s m" x="300" y="522">BUTTON BESIDE</text>
+<text class="s m" x="300" y="540">A NAME</text>
+</g>
+</svg>

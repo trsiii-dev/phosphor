@@ -1,0 +1,44 @@
+# Build output
+build/
+/out/
+/bin/
+
+# Hidden folders, except CI config
+.*/
+!.github/
+
+# IDE files
+*.iml
+.classpath
+.project
+
+# Local config. Only run/config.example.yaml is committed.
+/config.yaml
+/run/config.yaml
+*.local.yaml
+
+# Local-only files
+docs/
+archive/
+/scratch/
+stream-*.txt
+*.proto
+*.desc
+
+# Keys and secrets
+.env*
+*.pem
+*.key
+*.jks
+*.p12
+*.pfx
+
+# Logs and JVM dumps
+*.log
+*.hprof
+hs_err_pid*
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini

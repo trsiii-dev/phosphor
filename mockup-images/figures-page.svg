@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 900" width="700" height="900" role="img" aria-labelledby="t">
+<title id="t">Phosphor mock-up: SHIP / FIGURES, a Build 2.0 page, with a stand-in outline where the ship's top view goes</title>
+<style>
+text{font-family:'B612 Mono','DejaVu Sans Mono',monospace;fill:#6CFFB0}
+.l{font-size:14px;fill:#2E8F63;letter-spacing:.04em}
+.s{font-size:13px;fill:#2E8F63;letter-spacing:.04em}
+.t{font-size:17px;fill:#2E8F63;letter-spacing:.04em}
+.h{font-size:20px}
+.v{font-weight:700}
+.b{font-size:15px;font-weight:700;text-anchor:middle;letter-spacing:.04em}
+.f{font-size:12px;fill:#2E8F63;letter-spacing:.08em}
+.w{font-size:19px;text-anchor:middle}
+.e{text-anchor:end}
+.m{text-anchor:middle}
+.d{fill:#2E8F63}
+.o{fill:#FFB347}
+.k{fill:#7FD4FF}
+.z{fill:#04070A}
+.c{fill:none;stroke:#2E8F63}
+.x{fill:none;stroke:#6CFFB0}
+</style>
+<rect width="700" height="900" fill="#1B1E22"/>
+<g stroke="#2C3138" stroke-width="22">
+<path d="M78 25H622" stroke-dasharray="64 56"/>
+<path d="M78 875H622" stroke-dasharray="64 56"/>
+<path d="M25 98V802" stroke-dasharray="64 96"/>
+<path d="M675 98V802" stroke-dasharray="64 96"/>
+</g>
+<g transform="translate(50,50)">
+<rect width="600" height="800" rx="6" fill="#04070A"/>
+<text class="b" x="60" y="22">LIGHTS</text>
+<text class="b" x="180" y="22">POWER</text>
+<text class="b" x="300" y="22">WEAPONS</text>
+<rect class="x" x="379" y="5" width="82" height="24" rx="3"/>
+<text class="b" x="420" y="22">FIGURES</text>
+<text class="b k" x="540" y="22">RESET</text>
+<rect class="x" x="154" y="771" width="52" height="24" rx="3"/>
+<text class="b" x="60" y="788">FLIGHT</text>
+<text class="b" x="180" y="788">SHIP</text>
+<text class="b" x="300" y="788">NAV</text>
+<text class="b" x="420" y="788">LOG</text>
+<text class="b" x="540" y="788">PILOT</text>
+<text class="l" x="12" y="56">SHIP DATA</text>
+<text class="h" x="12" y="82">FOUND</text>
+<text class="l e" x="588" y="56">SHOWING</text>
+<text class="h e" x="588" y="82">YOUR SHIP</text>
+<g transform="translate(12,94)"><rect class="c" width="150" height="100" rx="4"/><text class="s" x="10" y="40">CARGO</text><text class="v" x="10" y="74" font-size="24">46 SCU</text></g>
+<g transform="translate(12,202)"><rect class="c" width="150" height="100" rx="4"/><text class="s" x="10" y="40">PAD SIZE</text><text class="v" x="10" y="74" font-size="24">M</text></g>
+<g transform="translate(12,310)"><rect class="c" width="150" height="100" rx="4"/><text class="s" x="10" y="40">CREW</text><text class="v" x="10" y="74" font-size="24">1 TO 2</text></g>
+<g transform="translate(12,418)"><rect class="c" width="150" height="100" rx="4"/><text class="s" x="10" y="40">SCM SPEED</text><text class="v" x="10" y="74" font-size="24">210 M/S</text></g>
+<g transform="translate(12,526)"><rect class="c" width="150" height="100" rx="4"/><text class="s" x="10" y="40">MAX SPEED</text><text class="v" x="10" y="74" font-size="24">1190 M/S</text></g>
+<g transform="translate(12,634)"><rect class="c" width="150" height="100" rx="4"/><text class="s" x="10" y="40">MASS</text><text class="v" x="10" y="74" font-size="24">81 T</text></g>
+<g transform="translate(438,94)"><rect class="c" width="150" height="100" rx="4"/><text class="s" x="10" y="40">LENGTH</text><text class="v" x="10" y="74" font-size="24">38 M</text></g>
+<g transform="translate(438,202)"><rect class="c" width="150" height="100" rx="4"/><text class="s" x="10" y="40">BEAM</text><text class="v" x="10" y="74" font-size="24">26 M</text></g>
+<g transform="translate(438,310)"><rect class="c" width="150" height="100" rx="4"/><text class="s" x="10" y="40">HEIGHT</text><text class="v" x="10" y="74" font-size="24">9 M</text></g>
+<g transform="translate(438,418)"><rect class="c" width="150" height="100" rx="4"/><text class="s" x="10" y="40">HYDROGEN TANK</text><text class="v" x="10" y="74" font-size="24">140</text></g>
+<g transform="translate(438,526)"><rect class="c" width="150" height="100" rx="4"/><text class="s" x="10" y="40">QUANTUM TANK</text><text class="v" x="10" y="74" font-size="24">2.5</text></g>
+<g transform="translate(438,634)"><rect class="c" width="150" height="100" rx="4"/><text class="s" x="10" y="40">HULL</text><text class="v" x="10" y="74" font-size="24">12400</text></g>
+<rect class="c" x="170" y="94" width="260" height="640" rx="4"/>
+<g transform="translate(182,150) scale(1.18)" fill="none" stroke-linejoin="round">
+<path d="M86 8 L94 20 L94 96 L100 104 L106 96 L106 20 L114 8 L120 24 L122 96 L126 120 L128 150 L148 186 L148 152 L152 152 L152 194 L168 223 L168 190 L172 190 L172 230 L184 252 L184 282 L134 238 L134 318 L130 330 L130 346 L118 346 L118 332 L114 332 L114 346 L102 346 L102 332 L98 332 L98 346 L86 346 L86 332 L82 332 L82 346 L70 346 L70 330 L66 318 L66 238 L16 282 L16 252 L28 230 L28 190 L32 190 L32 223 L48 194 L48 152 L52 152 L52 186 L72 150 L74 120 L78 96 L80 24 Z" stroke="#6CFFB0" stroke-width="3"/>
+<path d="M87 30 L87 90 M113 30 L113 90 M92 126 L108 126 L112 138 L108 150 L92 150 L88 138 Z M140 208 L176 256 M60 208 L24 256 M66 292 L134 292 M84 292 L84 330 M100 292 L100 330 M116 292 L116 330 M105 262 A5 5 0 1 0 95 262 A5 5 0 1 0 105 262" stroke="#2E8F63" stroke-width="2"/>
+<path d="M100 158 L100 244" stroke="#2E8F63" stroke-width="2"/>
+</g>
+<text class="s m" x="300" y="640">[TOP VIEW, FROM PROVIDER]</text>
+<text class="s m" x="300" y="680">PRESS FIGURES AGAIN TO</text>
+<text class="s m" x="300" y="698">CHOOSE ANOTHER SHIP</text>
+<text class="f" x="12" y="756">PHOSPHOR</text>
+<text class="f e" x="588" y="756">SAMPLE DATA</text>
+</g>
+</svg>

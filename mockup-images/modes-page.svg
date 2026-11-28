@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 900" width="700" height="900" role="img" aria-labelledby="t">
+<title id="t">Phosphor mock-up: FLIGHT / MODES, the flight assists</title>
+<style>
+text{font-family:'B612 Mono','DejaVu Sans Mono',monospace;fill:#6CFFB0}
+.l{font-size:14px;fill:#2E8F63;letter-spacing:.04em}
+.s{font-size:13px;fill:#2E8F63;letter-spacing:.04em}
+.t{font-size:17px;fill:#2E8F63;letter-spacing:.04em}
+.h{font-size:20px}
+.v{font-weight:700}
+.b{font-size:15px;font-weight:700;text-anchor:middle;letter-spacing:.04em}
+.f{font-size:12px;fill:#2E8F63;letter-spacing:.08em}
+.w{font-size:19px;text-anchor:middle}
+.e{text-anchor:end}
+.m{text-anchor:middle}
+.d{fill:#2E8F63}
+.o{fill:#FFB347}
+.k{fill:#7FD4FF}
+.z{fill:#04070A}
+.c{fill:none;stroke:#2E8F63}
+.x{fill:none;stroke:#6CFFB0}
+</style>
+<rect width="700" height="900" fill="#1B1E22"/>
+<g stroke="#2C3138" stroke-width="22">
+<path d="M78 25H622" stroke-dasharray="64 56"/>
+<path d="M78 875H622" stroke-dasharray="64 56"/>
+<path d="M25 98V802" stroke-dasharray="64 96"/>
+<path d="M675 98V802" stroke-dasharray="64 96"/>
+</g>
+<g transform="translate(50,50)">
+<rect width="600" height="800" rx="6" fill="#04070A"/>
+<text class="b" x="60" y="22">MAIN</text>
+<rect class="x" x="149" y="5" width="62" height="24" rx="3"/>
+<text class="b" x="180" y="22">MODES</text>
+<text class="b k" x="540" y="22">RESET</text>
+<rect class="x" x="24" y="771" width="72" height="24" rx="3"/>
+<text class="b" x="60" y="788">FLIGHT</text>
+<text class="b" x="180" y="788">SHIP</text>
+<text class="b" x="300" y="788">NAV</text>
+<text class="b" x="420" y="788">LOG</text>
+<text class="b" x="540" y="788">PILOT</text>
+<text class="l" x="12" y="56">FLIGHT MODES</text>
+<text class="h" x="12" y="82">COUPLED</text>
+<text class="l e" x="588" y="56">DATA</text>
+<text class="h e" x="588" y="82">LIVE</text>
+<g transform="translate(12,94)"><rect class="c" width="284" height="122" rx="4"/><text class="l" x="12" y="50">CRUISE</text><text class="v d" x="12" y="90" font-size="32">OFF</text></g>
+<g transform="translate(304,94)"><rect class="c" width="284" height="122" rx="4"/><text class="l" x="12" y="50">SPEED LIMITER</text><text class="v" x="12" y="90" font-size="32">ON</text></g>
+<g transform="translate(12,224)"><rect class="c" width="284" height="122" rx="4"/><text class="l" x="12" y="50">G-SAFE</text><text class="v" x="12" y="90" font-size="32">ON</text></g>
+<g transform="translate(304,224)"><rect class="c" width="284" height="122" rx="4"/><text class="l" x="12" y="50">ESP</text><text class="v" x="12" y="90" font-size="32">ON</text></g>
+<g transform="translate(12,354)"><rect class="c" width="284" height="122" rx="4"/><text class="l" x="12" y="50">GRAVITY COMPENSATION</text><text class="v" x="12" y="90" font-size="32">ON</text></g>
+<g transform="translate(304,354)"><rect class="c" width="284" height="122" rx="4"/><text class="l" x="12" y="50">WIND COMPENSATION</text><text class="v" x="12" y="90" font-size="32">ON</text></g>
+<g transform="translate(12,484)"><rect class="c" width="284" height="122" rx="4"/><text class="l" x="12" y="50">PROXIMITY ASSIST</text><text class="v" x="12" y="90" font-size="32">ON</text></g>
+<g transform="translate(304,484)"><rect class="c" width="284" height="122" rx="4"/><text class="l" x="12" y="50">STABILITY</text><text class="v" x="12" y="90" font-size="32">ON</text></g>
+<g transform="translate(12,614)"><rect class="c" width="284" height="122" rx="4"/><text class="l" x="12" y="50">VTOL</text><text class="v" x="12" y="90" font-size="32">RETRACTED</text></g>
+<g transform="translate(304,614)"><rect class="c" width="284" height="122" rx="4"/><text class="l" x="12" y="50">SHIP LIGHTS</text><text class="v d" x="12" y="90" font-size="32">OFF</text></g>
+<text class="f" x="12" y="756">PHOSPHOR</text>
+<text class="f e" x="588" y="756">SAMPLE DATA</text>
+</g>
+</svg>

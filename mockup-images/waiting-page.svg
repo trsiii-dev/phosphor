@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 900" width="700" height="900" role="img" aria-labelledby="t">
+<title id="t">Phosphor mock-up: the Waiting page, shown while the game is not running</title>
+<style>
+text{font-family:'B612 Mono','DejaVu Sans Mono',monospace;fill:#6CFFB0}
+.l{font-size:14px;fill:#2E8F63;letter-spacing:.04em}
+.s{font-size:13px;fill:#2E8F63;letter-spacing:.04em}
+.t{font-size:17px;fill:#2E8F63;letter-spacing:.04em}
+.h{font-size:20px}
+.v{font-weight:700}
+.b{font-size:15px;font-weight:700;text-anchor:middle;letter-spacing:.04em}
+.f{font-size:12px;fill:#2E8F63;letter-spacing:.08em}
+.w{font-size:19px;text-anchor:middle}
+.e{text-anchor:end}
+.m{text-anchor:middle}
+.d{fill:#2E8F63}
+.o{fill:#FFB347}
+.k{fill:#7FD4FF}
+.z{fill:#04070A}
+.c{fill:none;stroke:#2E8F63}
+.x{fill:none;stroke:#6CFFB0}
+</style>
+<rect width="700" height="900" fill="#1B1E22"/>
+<g stroke="#2C3138" stroke-width="22">
+<path d="M78 25H622" stroke-dasharray="64 56"/>
+<path d="M78 875H622" stroke-dasharray="64 56"/>
+<path d="M25 98V802" stroke-dasharray="64 96"/>
+<path d="M675 98V802" stroke-dasharray="64 96"/>
+</g>
+<g transform="translate(50,50)">
+<rect width="600" height="800" rx="6" fill="#04070A"/>
+<text class="v m" x="300" y="315" font-size="36">Waiting for Star</text>
+<text class="v m" x="300" y="360" font-size="36">Citizen.</text>
+<text class="w" x="300" y="410">The game is not running. The pages appear</text>
+<text class="w" x="300" y="438">by themselves when it starts.</text>
+<text class="w" x="300" y="485">Thank you for using Phosphor.</text>
+<text class="f" x="14" y="784" style="font-size:13px">PHOSPHOR</text>
+<text class="f e" x="586" y="784" style="font-size:13px">SAMPLE DATA</text>
+</g>
+</svg>

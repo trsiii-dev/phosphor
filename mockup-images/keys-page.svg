@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 900" width="700" height="900" role="img" aria-labelledby="t">
+<title id="t">Phosphor mock-up: PILOT / KEYS, your own key bindings</title>
+<style>
+text{font-family:'B612 Mono','DejaVu Sans Mono',monospace;fill:#6CFFB0}
+.l{font-size:14px;fill:#2E8F63;letter-spacing:.04em}
+.s{font-size:13px;fill:#2E8F63;letter-spacing:.04em}
+.t{font-size:17px;fill:#2E8F63;letter-spacing:.04em}
+.h{font-size:20px}
+.v{font-weight:700}
+.b{font-size:15px;font-weight:700;text-anchor:middle;letter-spacing:.04em}
+.f{font-size:12px;fill:#2E8F63;letter-spacing:.08em}
+.w{font-size:19px;text-anchor:middle}
+.e{text-anchor:end}
+.m{text-anchor:middle}
+.d{fill:#2E8F63}
+.o{fill:#FFB347}
+.k{fill:#7FD4FF}
+.z{fill:#04070A}
+.c{fill:none;stroke:#2E8F63}
+.x{fill:none;stroke:#6CFFB0}
+</style>
+<rect width="700" height="900" fill="#1B1E22"/>
+<g stroke="#2C3138" stroke-width="22">
+<path d="M78 25H622" stroke-dasharray="64 56"/>
+<path d="M78 875H622" stroke-dasharray="64 56"/>
+<path d="M25 98V802" stroke-dasharray="64 96"/>
+<path d="M675 98V802" stroke-dasharray="64 96"/>
+</g>
+<g transform="translate(50,50)">
+<rect width="600" height="800" rx="6" fill="#04070A"/>
+<text class="b" x="60" y="22">VITALS</text>
+<rect class="x" x="154" y="5" width="52" height="24" rx="3"/>
+<text class="b" x="180" y="22">KEYS</text>
+<text class="b k" x="540" y="22">RESET</text>
+<rect class="x" x="509" y="771" width="62" height="24" rx="3"/>
+<text class="b" x="60" y="788">FLIGHT</text>
+<text class="b" x="180" y="788">SHIP</text>
+<text class="b" x="300" y="788">NAV</text>
+<text class="b" x="420" y="788">LOG</text>
+<text class="b" x="540" y="788">PILOT</text>
+<text class="l" x="12" y="56">YOUR CONTROLS</text>
+<text class="h" x="12" y="82">[PROFILE NAME]</text>
+<text class="l e" x="588" y="56">READ FROM</text>
+<text class="h e" x="588" y="82">YOUR OWN FILE</text>
+<g transform="translate(12,94)"><rect class="c" width="576" height="100" rx="4"/><text class="t" x="14" y="57">[ACTION NAME]</text><text class="v e" x="562" y="61" font-size="28">[CONTROL]</text></g>
+<g transform="translate(12,202)"><rect class="c" width="576" height="100" rx="4"/><text class="t" x="14" y="57">[ACTION NAME]</text><text class="v e" x="562" y="61" font-size="28">[CONTROL]</text></g>
+<g transform="translate(12,310)"><rect class="c" width="576" height="100" rx="4"/><text class="t" x="14" y="57">[ACTION NAME]</text><text class="v e" x="562" y="61" font-size="28">[CONTROL]</text></g>
+<g transform="translate(12,418)"><rect class="c" width="576" height="100" rx="4"/><text class="t" x="14" y="57">[ACTION NAME]</text><text class="v e" x="562" y="61" font-size="28">[CONTROL]</text></g>
+<g transform="translate(12,526)"><rect class="c" width="576" height="100" rx="4"/><text class="t" x="14" y="57">[ACTION NAME]</text><text class="v e" x="562" y="61" font-size="28">[CONTROL]</text></g>
+<g transform="translate(12,634)"><rect class="c" width="576" height="100" rx="4"/><text class="t" x="14" y="57">[ACTION NAME]</text><text class="v e" x="562" y="61" font-size="28">[CONTROL]</text></g>
+<text class="f" x="12" y="756">PHOSPHOR</text>
+<text class="f e" x="588" y="756">SAMPLE DATA</text>
+</g>
+</svg>

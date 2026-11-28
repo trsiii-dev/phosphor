@@ -1,0 +1,34 @@
+# Build and test on every push, on Linux and Windows.
+name: build
+
+on:
+  push:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    strategy:
+      # Let the other OS finish when one fails, so I see both results.
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          # The build never pushes, so don't leave the token in the git config.
+          persist-credentials: false
+
+      # Fail if gradle-wrapper.jar is not a known Gradle release.
+      - uses: gradle/actions/wrapper-validation@v6
+
+      - uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: '25'
+          cache: gradle
+
+      - run: ./gradlew build

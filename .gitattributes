@@ -1,0 +1,12 @@
+* text=auto
+
+# The wrapper scripts need the line endings of the OS that runs them.
+gradlew text eol=lf
+*.bat text eol=crlf
+
+*.jar binary
+*.png binary
+
+# Test fixtures must stay byte-identical, so no line-ending conversion.
+# Keep this line last so it overrides the rules above.
+src/test/resources/fixtures/** -text

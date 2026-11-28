@@ -1,0 +1,65 @@
+# Phosphor example config.
+#
+# Copy this file to your config folder, name it config.yaml, and edit it.
+#   Windows:  %APPDATA%\phosphor\config.yaml
+#   Linux:    ~/.config/phosphor/config.yaml
+#
+# Indent with spaces, never tabs. Lines that start with # are comments.
+# Any key you leave out uses the value shown here, except screens.
+
+# Units for every measurement on every page. Allowed values are metric,
+# imperial, and aviation.
+units: metric
+
+# The game's telemetry stream. Phosphor only listens to it and never turns it on.
+stream:
+  # Set to false to run without the stream.
+  enabled: true
+  # Must be this computer: localhost or a loopback address.
+  address: 127.0.0.1
+  port: 2942
+  # Times need a unit: ms, s, or m (250ms, 2s, 1m).
+  # How long one connection attempt may take, and how long to wait between attempts.
+  connectTimeout: 1s
+  reconnectInterval: 5s
+  # Values older than this change color and show their age.
+  staleAfter: 2s
+  # After this long without the stream, a page says it has no data.
+  giveUpAfter: 10s
+
+display:
+  # Maximum repaints per second.
+  frameRateCap: 20
+  # false: one borderless window on each screen listed below.
+  # true: ordinary desktop windows, useful for testing.
+  windowed: false
+  # Text size multiplier. 1.0 is the designed size, and larger values make all
+  # text larger.
+  textScale: 1.0
+
+# One entry per screen. Phosphor finds a screen by its position and size in
+# your desktop layout, in pixels. The numbers below are examples, so replace
+# them with your own.
+# page is LIGHTS, FLIGHT, or VITALS. rotation is 0, 90, 180, or 270.
+screens:
+  - name: left-mfd
+    x: 1920
+    y: 0
+    width: 1024
+    height: 768
+    page: LIGHTS
+    rotation: 0
+  - name: center-mfd
+    x: 2944
+    y: 0
+    width: 1024
+    height: 768
+    page: FLIGHT
+    rotation: 0
+  - name: right-mfd
+    x: 3968
+    y: 0
+    width: 1024
+    height: 768
+    page: VITALS
+    rotation: 0
