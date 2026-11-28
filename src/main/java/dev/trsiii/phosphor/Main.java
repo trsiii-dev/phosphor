@@ -95,7 +95,10 @@ public final class Main {
         Clock clock = new MonotonicClock();
         StreamConfig stream = config.stream();
         Tracker tracker = new Tracker(
-                new StreamMachine(stream.staleAfter(), stream.giveUpAfter()), clock.instant(), Main::quitWithTheGame);
+                new StreamMachine(stream.staleAfter(), stream.giveUpAfter()),
+                config.units(),
+                clock.instant(),
+                Main::quitWithTheGame);
         tracker.start();
         new Ticker(clock, tracker::post).start();
         if (commandLine.demo()) {

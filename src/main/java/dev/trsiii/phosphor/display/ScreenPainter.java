@@ -5,6 +5,7 @@ import dev.trsiii.phosphor.pages.Look;
 import dev.trsiii.phosphor.pages.MfdPage;
 import dev.trsiii.phosphor.pages.WaitingPage;
 import dev.trsiii.phosphor.tracker.Snapshot;
+import dev.trsiii.phosphor.tracker.StreamState;
 import dev.trsiii.phosphor.view.Messages;
 import java.awt.Dimension;
 import java.awt.Graphics2D;
@@ -22,6 +23,7 @@ import java.awt.RenderingHints;
 public final class ScreenPainter {
 
     private static final System.Logger LOG = System.getLogger(ScreenPainter.class.getName());
+    private static final MfdPage WAITING_PAGE = new WaitingPage();
     private static final MfdPage ERROR_PAGE = WaitingPage.forPageError();
 
     private final MfdPage page;
@@ -47,17 +49,21 @@ public final class ScreenPainter {
         g.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
         g.setRenderingHint(RenderingHints.KEY_FRACTIONALMETRICS, RenderingHints.VALUE_FRACTIONALMETRICS_ON);
 
+        // A page that reads the stream has nothing to show without it.
+        boolean waiting = page.needsStream() && snapshot.stream() == StreamState.ABSENT;
+
         clear(g, size);
-        if (!paintPage(page, g, snapshot, size)) {
+        if (!paintPage(waiting ? WAITING_PAGE : page, g, snapshot, size)) {
             // Wipe whatever the page drew before it failed.
             clear(g, size);
             paintPage(ERROR_PAGE, g, snapshot, size);
         }
 
+        // The footer calls the page the default only while that page is the one showing.
         Layout at = Layout.of(size);
         g.setColor(Look.DIM);
         g.setFont(Look.regular(at.len(13)));
-        g.drawString(Messages.footer(build, defaultPage), at.x(14), at.y(784));
+        g.drawString(Messages.footer(build, defaultPage && !waiting), at.x(14), at.y(784));
     }
 
     private static void clear(Graphics2D g, Dimension size) {

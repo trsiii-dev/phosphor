@@ -16,6 +16,14 @@ public interface MfdPage {
     /** Name used in the config file, in capitals. */
     String name();
 
+    /**
+     * True if the page has nothing to show without the stream. Such a page is
+     * replaced by the Waiting page while the stream is absent.
+     */
+    default boolean needsStream() {
+        return false;
+    }
+
     /** Draws the snapshot into a rectangle of the given size, with its origin at 0,0. */
     void paint(Graphics2D g, Snapshot snapshot, Dimension size);
 }

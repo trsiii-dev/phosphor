@@ -9,6 +9,29 @@ public final class Messages {
     public static final String THANKS = "Thank you for using Phosphor.";
     public static final String PAGE_ERROR = "page error";
 
+    public static final String LIVE = "LIVE";
+    public static final String NO_STREAM = "NO STREAM";
+    public static final String DATA = "DATA";
+
+    public static final String FLIGHT_MODE = "FLIGHT MODE";
+    public static final String LANDING_GEAR = "LANDING GEAR";
+    public static final String GEAR_DOWN = "DOWN";
+    public static final String GEAR_UP = "UP";
+    public static final String DOORS = "DOORS";
+    public static final String DOORS_OPEN = "OPEN";
+    public static final String DOORS_CLOSED = "CLOSED";
+
+    public static final String WARNING_LIGHTS = "WARNING LIGHTS";
+    public static final String LIT = " LIT";
+    public static final String NOMINAL = "NOMINAL";
+    public static final String MINOR = "MINOR";
+    public static final String MAJOR = "MAJOR";
+
+    public static final String PILOT = "PILOT";
+    public static final String AIR = "AIR";
+    public static final String BREATHABLE = "BREATHABLE";
+    public static final String NOT_BREATHABLE = "NOT BREATHABLE";
+
     /** Shown in place of a value the game did not send. Never a zero. */
     public static final String UNKNOWN = "---";
 

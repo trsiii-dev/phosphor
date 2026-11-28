@@ -1,5 +1,6 @@
 package dev.trsiii.phosphor.tracker;
 
+import dev.trsiii.phosphor.telemetry.Telemetry;
 import java.time.Instant;
 
 /**
@@ -14,12 +15,18 @@ public sealed interface TrackerEvent {
     Instant at();
 
     /**
-     * A message arrived from the stream. TODO: add the message payload with the
-     * stream client.
+     * A message arrived from the stream.
      *
-     * @param at arrival time
+     * @param at        arrival time
+     * @param telemetry the values it carried
      */
-    record StreamMessage(Instant at) implements TrackerEvent {}
+    record StreamMessage(Instant at, Telemetry telemetry) implements TrackerEvent {
+
+        /** A message that carried no values. */
+        public StreamMessage(Instant at) {
+            this(at, Telemetry.EMPTY);
+        }
+    }
 
     /**
      * The stream closed, failed, or could not be reached.

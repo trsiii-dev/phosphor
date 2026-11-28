@@ -34,15 +34,15 @@ To run it, pass a config file. The example in `run/` works as is:
 
 For now that only loads and validates the config, logs one line with what it found, and exits, because the program cannot open the MFD screens yet. The config keys are documented in `run/config.example.yaml`.
 
-To see the pages in ordinary desktop windows, add `--windowed`:
+To see the pages in ordinary desktop windows with made-up data, use `--demo`:
 
 ```
-./gradlew run --args="--config run/config.example.yaml --windowed"
+./gradlew run --args="--config run/config.example.yaml --demo"
 ```
 
-Only the Waiting page and a debug page are drawn so far. Close any window to quit.
+The data runs for eight seconds, stops for five, and repeats, so the pages go live and then stale. Close any window to quit.
 
-Use `--demo` in place of `--windowed` to feed the pages made-up data, so they can be worked on without the game. The data runs for eight seconds, stops for five, and repeats.
+`--windowed` opens the same windows without the made-up data. The stream client is not written yet, so they show the Waiting page.
 
 ## License
 

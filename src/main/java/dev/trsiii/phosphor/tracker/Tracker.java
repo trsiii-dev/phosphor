@@ -1,5 +1,7 @@
 package dev.trsiii.phosphor.tracker;
 
+import dev.trsiii.phosphor.config.UnitSystem;
+import dev.trsiii.phosphor.telemetry.Telemetry;
 import dev.trsiii.phosphor.tracker.StreamPhase.Live;
 import dev.trsiii.phosphor.tracker.StreamPhase.Stale;
 import dev.trsiii.phosphor.tracker.TrackerEvent.StreamEnded;
@@ -36,19 +38,24 @@ public final class Tracker {
     private final AtomicBoolean dropping = new AtomicBoolean();
     private final Thread thread = new Thread(this::run, "phosphor-tracker");
 
+    private final UnitSystem units;
+
     // Touched only by the tracker thread.
     private StreamPhase phase;
+    private Telemetry newest = Telemetry.EMPTY;
     private Instant lastPublished;
 
     /**
+     * @param units        the units setting, passed on to the pages in every snapshot
      * @param now          start time, from the same clock that stamps the events
      * @param onGameClosed run once, on the tracker thread, when the game has closed
      */
-    public Tracker(StreamMachine machine, Instant now, Runnable onGameClosed) {
+    public Tracker(StreamMachine machine, UnitSystem units, Instant now, Runnable onGameClosed) {
         this.machine = machine;
+        this.units = units;
         this.onGameClosed = onGameClosed;
         this.phase = machine.start();
-        this.snapshot = new AtomicReference<>(Snapshot.of(phase, now));
+        this.snapshot = new AtomicReference<>(Snapshot.of(phase, now, newest, units));
         this.lastPublished = now;
         // A daemon thread never keeps the program alive on its own.
         thread.setDaemon(true);
@@ -84,7 +91,8 @@ public final class Tracker {
         } catch (RuntimeException e) {
             LOG.log(System.Logger.Level.ERROR, "The tracker stopped on an error.", e);
             // Never leave the pages showing live values that no longer update.
-            snapshot.set(new Snapshot(StreamState.ABSENT, snapshot.get().at(), Optional.empty()));
+            snapshot.set(new Snapshot(
+                    StreamState.ABSENT, snapshot.get().at(), Optional.empty(), Telemetry.EMPTY, units));
         }
     }
 
@@ -92,6 +100,9 @@ public final class Tracker {
     void handle(TrackerEvent event) {
         StreamPhase before = phase;
         phase = machine.next(before, event);
+        if (event instanceof StreamMessage message) {
+            newest = message.telemetry();
+        }
 
         boolean changed = phase.getClass() != before.getClass();
         if (changed) {
@@ -101,7 +112,7 @@ public final class Tracker {
         // While live or stale the snapshot's time matters, because pages show how old the values are.
         boolean aging = phase instanceof Live || phase instanceof Stale;
         if (changed || (aging && !event.at().isBefore(lastPublished.plus(PUBLISH_INTERVAL)))) {
-            snapshot.set(Snapshot.of(phase, event.at()));
+            snapshot.set(Snapshot.of(phase, event.at(), newest, units));
             lastPublished = event.at();
         }
 

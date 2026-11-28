@@ -2,6 +2,9 @@ package dev.trsiii.phosphor.tracker;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import dev.trsiii.phosphor.config.UnitSystem;
+import dev.trsiii.phosphor.source.DemoSource;
+import dev.trsiii.phosphor.telemetry.Telemetry;
 import dev.trsiii.phosphor.tracker.TrackerEvent.StreamEnded;
 import dev.trsiii.phosphor.tracker.TrackerEvent.StreamMessage;
 import dev.trsiii.phosphor.tracker.TrackerEvent.Tick;
@@ -23,7 +26,10 @@ class TrackerTest {
 
     // Stale after 2 s and given up on after 10 s, as in run/config.example.yaml.
     private final Tracker tracker = new Tracker(
-            new StreamMachine(Duration.ofSeconds(2), Duration.ofSeconds(10)), START, closed::incrementAndGet);
+            new StreamMachine(Duration.ofSeconds(2), Duration.ofSeconds(10)),
+            UnitSystem.IMPERIAL,
+            START,
+            closed::incrementAndGet);
 
     private static Instant t(long millis) {
         return START.plusMillis(millis);
@@ -101,6 +107,22 @@ class TrackerTest {
         tracker.handle(message(120));
         assertThat(tracker.snapshot().at()).isEqualTo(t(120));
         assertThat(tracker.snapshot().lastMessage()).contains(t(120));
+    }
+
+    @Test
+    void theNewestValuesAndTheUnitsSettingReachTheSnapshot() {
+        Telemetry values = DemoSource.sample(0);
+
+        tracker.handle(new StreamMessage(t(0), values));
+
+        assertThat(tracker.snapshot().telemetry()).isEqualTo(values);
+        assertThat(tracker.snapshot().units()).isEqualTo(UnitSystem.IMPERIAL);
+
+        // Once the stream is given up on, the values are dropped.
+        tracker.handle(tick(10_250));
+        tracker.handle(tick(10_500));
+        assertThat(tracker.snapshot().stream()).isEqualTo(StreamState.ABSENT);
+        assertThat(tracker.snapshot().telemetry()).isEqualTo(Telemetry.EMPTY);
     }
 
     @Test

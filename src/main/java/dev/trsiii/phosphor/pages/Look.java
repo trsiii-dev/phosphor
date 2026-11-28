@@ -21,6 +21,12 @@ public final class Look {
     /** Something needs attention. */
     public static final Color ALERT = new Color(0xFFB347);
 
+    /** Stale values, which should not be trusted. */
+    public static final Color STALE = new Color(0xB8853A);
+
+    /** The compass ring and its mark on FLIGHT. Redder than ALERT so the two are not confused. */
+    public static final Color COMPASS = new Color(0xFF8C1A);
+
     private static final Font REGULAR = load("B612Mono-Regular.ttf", Font.PLAIN);
     private static final Font BOLD = load("B612Mono-Bold.ttf", Font.BOLD);
 
