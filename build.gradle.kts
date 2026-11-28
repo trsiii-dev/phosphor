@@ -53,4 +53,6 @@ tasks.processResources {
 
 tasks.test {
     useJUnitPlatform()
+    // Pages are painted into images, so the tests must never need a display.
+    systemProperty("java.awt.headless", "true")
 }

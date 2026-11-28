@@ -13,6 +13,8 @@ class CommandLineTest {
         CommandLine commandLine = CommandLine.parse();
 
         assertThat(commandLine.config()).isEmpty();
+        assertThat(commandLine.windowed()).isFalse();
+        assertThat(commandLine.demo()).isFalse();
         assertThat(commandLine.help()).isFalse();
         assertThat(commandLine.version()).isFalse();
     }
@@ -21,6 +23,19 @@ class CommandLineTest {
     void theConfigFileCanFollowTheOptionOrBeJoinedToIt() {
         assertThat(CommandLine.parse("--config", "my.yaml").config()).contains(Path.of("my.yaml"));
         assertThat(CommandLine.parse("--config=my.yaml").config()).contains(Path.of("my.yaml"));
+    }
+
+    @Test
+    void windowedCanBeCombinedWithAConfigFile() {
+        CommandLine commandLine = CommandLine.parse("--config", "my.yaml", "--windowed");
+
+        assertThat(commandLine.windowed()).isTrue();
+        assertThat(commandLine.config()).contains(Path.of("my.yaml"));
+    }
+
+    @Test
+    void demoIsRecognized() {
+        assertThat(CommandLine.parse("--demo").demo()).isTrue();
     }
 
     @Test
